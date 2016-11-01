@@ -27,7 +27,7 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-jetty")
     // end::jetty[]
     // tag::actuator[]
-    compile("org.springframework.boot:spring-boot-starter-actuator")
+//    compile("org.springframework.boot:spring-boot-starter-actuator")
 
     testCompile 'com.google.truth:truth:0.28'
     testCompile 'junit:junit:4.12'
