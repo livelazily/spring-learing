@@ -7,6 +7,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -18,8 +19,9 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
  * Created by livelazily
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class ApplicationTest {
+@SpringBootTest
+@AutoConfigureMockMvc
+public class HelloControllerTest {
     private MockMvc mvc;
 
     @Before
@@ -33,5 +35,4 @@ public class ApplicationTest {
                 .andExpect(status().isOk())
                 .andExpect(content().string(equalTo("Greetings from Spring Boot!")));
     }
-
 }
