@@ -1,10 +1,13 @@
 buildscript {
-    ext.kotlin_version = '1.0.5'
+    ext {
+        spring_version = '1.4.2.RELEASE'
+        kotlin_version = '1.0.5'
+    }
     repositories {
         mavenCentral()
     }
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.2.RELEASE")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:$spring_version")
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
